@@ -81,7 +81,7 @@ function Audio({
           </div>
           {/* svg here */}
           <div
-            className="d-flex"
+            className="d-flex mx-auto"
             style={{
               ...getPositionStyle(svgPosition),
               bottom: "20px",
