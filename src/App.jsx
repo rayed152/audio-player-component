@@ -15,6 +15,7 @@ function App() {
           descriptionPosition=""
           additionalTextPosition=""
           imagePosition=""
+          svgPosition=""
         />
       </div>
     </>
