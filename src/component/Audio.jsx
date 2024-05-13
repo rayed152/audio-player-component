@@ -84,10 +84,8 @@ function Audio({
             className="d-flex mx-auto"
             style={{
               ...getPositionStyle(svgPosition),
-              bottom: "20px",
-              left: "20px",
+
               width: "calc(100% - 40px)", // Adjusted width to account for paddings
-              height: "auto",
             }}
           >
             <img src={svg} alt="logo" style={{ maxWidth: "100%" }} />
