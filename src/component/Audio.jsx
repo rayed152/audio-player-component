@@ -75,7 +75,6 @@ function Audio({
               className="mt-3 mx-2"
               style={getPositionStyle(additionalTextPosition)}
             >
-              {/* Add margin-top to move the text down */}
               <p>{additionalText}</p>
             </div>
           </div>
@@ -85,7 +84,7 @@ function Audio({
             style={{
               ...getPositionStyle(svgPosition),
 
-              width: "calc(100% - 40px)", // Adjusted width to account for paddings
+              width: "calc(100% - 40px)",
             }}
           >
             <img src={svg} alt="logo" style={{ maxWidth: "100%" }} />
