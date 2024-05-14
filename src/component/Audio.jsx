@@ -8,31 +8,7 @@ import {
   faAngleDown,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Audio({
-  title,
-  imageSrc,
-  additionalText,
-  description,
-  titlePosition,
-  imagePosition,
-  additionalTextPosition,
-  descriptionPosition,
-  svgPosition,
-}) {
-  const getPositionStyle = (position) => {
-    if (position === "top") {
-      return { order: -1 };
-    } else if (position === "right") {
-      return { flexDirection: "row-reverse" };
-    } else if (position === "bottom") {
-      return { order: 1 };
-    } else if (position === "left") {
-      return { flexDirection: "row" };
-    } else {
-      return {};
-    }
-  };
-
+function Audio({ title, imageSrc, additionalText, description }) {
   return (
     <div className="container d-flex flex-column justify-content-center align-items-center vh-100">
       <div
@@ -45,24 +21,11 @@ function Audio({
         }}
       >
         <div className="card-body d-flex flex-column">
-          <h5
-            className="card-title align-self-center mb-3"
-            style={getPositionStyle(titlePosition)}
-          >
-            {title}
-          </h5>
-          <p
-            className="card-text"
-            style={getPositionStyle(descriptionPosition)}
-          >
-            {description}
-          </p>
+          <h5 className="card-title align-self-center mb-3">{title}</h5>
+          <p className="card-text">{description}</p>
 
           {/* Image and additional text */}
-          <div
-            className="d-flex justify-content-center align-items-center"
-            style={getPositionStyle(imagePosition)}
-          >
+          <div className="d-flex justify-content-center align-items-center">
             <div className="mt-3 mx-2">
               <img
                 src={imageSrc}
@@ -71,10 +34,7 @@ function Audio({
                 className="rounded"
               />
             </div>
-            <div
-              className="mt-3 mx-2"
-              style={getPositionStyle(additionalTextPosition)}
-            >
+            <div className="mt-3 mx-2">
               <p>{additionalText}</p>
             </div>
           </div>
@@ -82,8 +42,6 @@ function Audio({
           <div
             className="d-flex mx-auto"
             style={{
-              ...getPositionStyle(svgPosition),
-
               width: "calc(100% - 40px)",
             }}
           >

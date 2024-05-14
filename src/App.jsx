@@ -1,6 +1,7 @@
 import "./App.css";
 import Audio from "./component/Audio";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Test from "./component/Slider";
 
 function App() {
   return (
@@ -11,13 +12,13 @@ function App() {
           description="Sex, Drugs, and Money Might Actually Make You Happier (ft. Sonja Lyubomirsky)"
           imageSrc="logo.jpg"
           additionalText="All wight. So i did my assignment on the four types of holiday shoppers. So the first one is called the Evergreen and this buyer spreads their"
-          titlePosition=""
-          descriptionPosition=""
-          additionalTextPosition=""
-          imagePosition=""
-          svgPosition=""
         />
       </div>
+      <Test />
+      <Test />
+      <Test />
+      <Test />
+      <Test />
     </>
   );
 }
