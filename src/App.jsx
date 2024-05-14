@@ -1,10 +1,10 @@
+import React, { useState } from "react";
 import "./App.css";
 import Audio from "./component/Audio";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "./component/Slider";
 import svg from "./assets/Group.svg";
 import bgImage from "./assets/headphones.png";
-import { useState } from "react";
 
 function App() {
   const [titlePositionX, setTitlePositionX] = useState(0);
@@ -17,6 +17,8 @@ function App() {
   const [additionalTextPositionY, setAdditionalTextPositionY] = useState(0);
   const [svgPositionX, setSvgPositionX] = useState(0);
   const [svgPositionY, setSvgPositionY] = useState(0);
+  const [bgImagePositionX, setBgImagePositionX] = useState(0);
+  const [bgImagePositionY, setBgImagePositionY] = useState(0);
 
   const handleTitlePositionXChange = (value) => {
     setTitlePositionX(value);
@@ -58,6 +60,14 @@ function App() {
     setSvgPositionY(value);
   };
 
+  const handleBgImagePositionXChange = (value) => {
+    setBgImagePositionX(value);
+  };
+
+  const handleBgImagePositionYChange = (value) => {
+    setBgImagePositionY(value);
+  };
+
   return (
     <>
       <div className="d-flex align-items-center row">
@@ -79,9 +89,10 @@ function App() {
             svgPositionY={svgPositionY}
             svg={svg}
             bgImage={bgImage}
+            bgImagePositionX={bgImagePositionX}
+            bgImagePositionY={bgImagePositionY}
           />
         </div>
-        {/* all the sliders here */}
         <div className="col-6">
           <Slider
             labelText1="Title PositionX"
@@ -132,6 +143,16 @@ function App() {
             maxX={55}
             minY={-360}
             maxY={0}
+          />
+          <Slider
+            labelText1="Bg Image PositionX"
+            labelText2="Bg Image PositionY"
+            onSliderXChange={handleBgImagePositionXChange}
+            onSliderYChange={handleBgImagePositionYChange}
+            minX={-380}
+            maxX={380}
+            minY={-380}
+            maxY={380}
           />
         </div>
       </div>

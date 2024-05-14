@@ -24,6 +24,8 @@ function Audio({
   additionalTextPositionY,
   svgPositionX,
   svgPositionY,
+  bgImagePositionX,
+  bgImagePositionY,
 }) {
   return (
     <div className="container d-flex flex-column justify-content-center align-items-center vh-100">
@@ -33,11 +35,10 @@ function Audio({
           width: "430px",
           height: "450px",
           padding: "20px",
-          backgroundImage: bgImage
-            ? `url(${bgImage})`
-            : "linear-gradient(to top, #ff8a00, #da1b60)",
-          backgroundSize: "100% 100%",
-          backgroundPosition: "center",
+          // backgroundImage: `url(${bgImage})`,
+          background: `url(${bgImage}) no-repeat, linear-gradient(to top, #ff8a00, #da1b60) fixed`,
+          backgroundSize: "cover",
+          backgroundPosition: `${bgImagePositionX}px ${bgImagePositionY}px`,
         }}
       >
         <div className="card-body d-flex flex-column">
