@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import svg from "../assets/Group.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
@@ -13,6 +12,8 @@ function Audio({
   imageSrc,
   additionalText,
   description,
+  svg,
+  bgImage,
   titlePositionX,
   titlePositionY,
   descriptionPositionY,
@@ -32,7 +33,11 @@ function Audio({
           width: "430px",
           height: "450px",
           padding: "20px",
-          backgroundImage: "linear-gradient(to top, #ff8a00, #da1b60)",
+          backgroundImage: bgImage
+            ? `url(${bgImage})`
+            : "linear-gradient(to top, #ff8a00, #da1b60)",
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center",
         }}
       >
         <div className="card-body d-flex flex-column">

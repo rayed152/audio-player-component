@@ -2,6 +2,8 @@ import "./App.css";
 import Audio from "./component/Audio";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "./component/Slider";
+import svg from "./assets/Group.svg";
+import bgImage from "./assets/headphones.png";
 import { useState } from "react";
 
 function App() {
@@ -75,6 +77,8 @@ function App() {
             additionalTextPositionY={additionalTextPositionY}
             svgPositionX={svgPositionX}
             svgPositionY={svgPositionY}
+            svg={svg}
+            bgImage={bgImage}
           />
         </div>
         {/* all the sliders here */}
