@@ -15,8 +15,14 @@ function Audio({
   description,
   titlePositionX,
   titlePositionY,
+  descriptionPositionY,
+  descriptionPositionX,
   imgPositionX,
   imgPositionY,
+  additionalTextPositionX,
+  additionalTextPositionY,
+  svgPositionX,
+  svgPositionY,
 }) {
   return (
     <div className="container d-flex flex-column justify-content-center align-items-center vh-100">
@@ -40,7 +46,16 @@ function Audio({
           >
             {title}
           </h5>
-          <p className="card-text">{description}</p>
+          <p
+            className="card-text"
+            style={{
+              position: "relative",
+              top: descriptionPositionY + "px",
+              left: descriptionPositionX + "px",
+            }}
+          >
+            {description}
+          </p>
 
           <div className="d-flex justify-content-center align-items-center">
             <div
@@ -58,7 +73,14 @@ function Audio({
                 className="rounded"
               />
             </div>
-            <div className="mt-3 mx-2">
+            <div
+              className="mt-3 mx-2"
+              style={{
+                position: "relative",
+                top: additionalTextPositionY + "px",
+                left: additionalTextPositionX + "px",
+              }}
+            >
               <p>{additionalText}</p>
             </div>
           </div>
@@ -67,6 +89,9 @@ function Audio({
             className="d-flex mx-auto"
             style={{
               width: "calc(100% - 40px)",
+              position: "relative",
+              top: svgPositionY + "px",
+              left: svgPositionX + "px",
             }}
           >
             <img src={svg} alt="logo" style={{ maxWidth: "100%" }} />
