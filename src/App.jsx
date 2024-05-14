@@ -77,6 +77,7 @@ function App() {
             svgPositionY={svgPositionY}
           />
         </div>
+        {/* all the sliders here */}
         <div className="col-6">
           <Slider
             labelText1="Title PositionX"
