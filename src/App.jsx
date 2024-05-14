@@ -28,38 +28,42 @@ function App() {
 
   return (
     <>
-      <div>
-        <Audio
-          title="The Subtle Art of Not Giving a F*ck Podcast"
-          description="Sex, Drugs, and Money Might Actually Make You Happier (ft. Sonja Lyubomirsky)"
-          imageSrc="logo.jpg"
-          additionalText="All wight. So i did my assignment on the four types of holiday shoppers. So the first one is called the Evergreen and this buyer spreads their"
-          titlePositionX={titlePositionX}
-          titlePositionY={titlePositionY}
-          imgPositionX={imgPositionX}
-          imgPositionY={imgPositionY}
-        />
+      <div className="d-flex align-items-center row">
+        <div className="col-6">
+          <Audio
+            title="The Subtle Art of Not Giving a F*ck Podcast"
+            description="Sex, Drugs, and Money Might Actually Make You Happier (ft. Sonja Lyubomirsky)"
+            imageSrc="logo.jpg"
+            additionalText="All wight. So i did my assignment on the four types of holiday shoppers. So the first one is called the Evergreen and this buyer spreads their"
+            titlePositionX={titlePositionX}
+            titlePositionY={titlePositionY}
+            imgPositionX={imgPositionX}
+            imgPositionY={imgPositionY}
+          />
+        </div>
+        <div className="col-6">
+          <Slider
+            labelText1="Title PositionX"
+            labelText2="Title PositionY"
+            onSliderXChange={handleTitlePositionXChange}
+            onSliderYChange={handleTitlePositionYChange}
+            minX={0}
+            minY={0}
+            maxX={50}
+            maxY={350}
+          />
+          <Slider
+            labelText1="Img PositionX"
+            labelText2="Img PositionY"
+            onSliderXChange={handleImgPositionXChange}
+            onSliderYChange={handleImgPositionYChange}
+            minX={0}
+            minY={-150}
+            maxX={200}
+            maxY={70}
+          />
+        </div>
       </div>
-      <Slider
-        labelText1="Title PositionX"
-        labelText2="Title PositionY"
-        onSliderXChange={handleTitlePositionXChange}
-        onSliderYChange={handleTitlePositionYChange}
-        minX={0}
-        minY={0}
-        maxX={50}
-        maxY={350}
-      />
-      <Slider
-        labelText1="Img PositionX"
-        labelText2="Img PositionY"
-        onSliderXChange={handleImgPositionXChange}
-        onSliderYChange={handleImgPositionYChange}
-        minX={0}
-        minY={-150}
-        maxX={200}
-        maxY={70}
-      />
     </>
   );
 }
