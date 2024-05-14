@@ -35,12 +35,23 @@ function Audio({
           width: "430px",
           height: "450px",
           padding: "20px",
-          // backgroundImage: `url(${bgImage})`,
-          background: `url(${bgImage}) no-repeat, linear-gradient(to top, #ff8a00, #da1b60) fixed`,
-          backgroundSize: "cover",
-          backgroundPosition: `${bgImagePositionX}px ${bgImagePositionY}px`,
+          position: "relative",
+          background: "linear-gradient(to top, #ff8a00, #da1b60)",
         }}
       >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: `url(${bgImage}) no-repeat`,
+            backgroundSize: "cover",
+            backgroundPosition: `${bgImagePositionX}px ${bgImagePositionY}px`,
+            zIndex: 0,
+          }}
+        ></div>
         <div className="card-body d-flex flex-column">
           <h5
             className="card-title align-self-center mb-3"
