@@ -5,7 +5,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "./component/Slider";
 import svg from "./assets/Group.svg";
 import bgImage from "./assets/headphones.png";
+<<<<<<< HEAD
 import SubscriptionPlans from "./component/SubscriptionPlans";
+=======
+import bgImage2 from "./assets/background.jpg";
+>>>>>>> refs/remotes/origin/main
 
 function App() {
   const [titlePositionX, setTitlePositionX] = useState(0);
@@ -90,7 +94,7 @@ function App() {
             svgPositionX={svgPositionX}
             svgPositionY={svgPositionY}
             svg={svg}
-            bgImage={bgImage}
+            bgImage={bgImage2}
             bgImagePositionX={bgImagePositionX}
             bgImagePositionY={bgImagePositionY}
           />
