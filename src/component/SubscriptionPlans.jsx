@@ -55,16 +55,18 @@ const SubscriptionPlans = () => {
         <div className="col-md-4">
           <div
             className="position-relative"
-            style={{ borderRadius: "16px", paddingBottom: "15px" }}
+            style={{
+              borderRadius: "16px",
+              paddingTop: "30px",
+              paddingBottom: "30px",
+            }}
           >
-            {/* Most popular */}
-
             {/* card */}
             <div
               className="card border-secondary position-relative"
               style={{
                 borderRadius: "16px 16px 16px 16px",
-                height: "360px",
+                height: "",
               }}
             >
               <div className="card-body " style={{}}>
@@ -135,15 +137,15 @@ const SubscriptionPlans = () => {
 
         {/* Advanced */}
         <div className="col-md-4">
-          <div className="position-relative" style={{ borderRadius: "16px" }}>
-            {/* Most popular */}
-
+          <div
+            className="position-relative"
+            style={{ borderRadius: "16px", paddingTop: "30px" }}
+          >
             {/* card */}
             <div
               className="card border-secondary position-relative"
               style={{
                 borderRadius: "16px 16px 16px 16px",
-                height: "360px",
               }}
             >
               <div className="card-body " style={{}}>
