@@ -72,8 +72,8 @@ function App() {
 
   return (
     <>
-      {/* <SubscriptionPlans /> */}
-      <div className="d-flex align-items-center row">
+      <SubscriptionPlans />
+      {/* <div className="d-flex align-items-center row">
         <div className="col-6">
           <Audio
             title="The Subtle Art of Not Giving a F*ck Podcast"
@@ -158,7 +158,7 @@ function App() {
             maxY={380}
           />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
