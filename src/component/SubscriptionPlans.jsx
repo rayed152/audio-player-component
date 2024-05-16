@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
 
 const SubscriptionPlans = () => {
+  const [selectedPlan, setSelectedPlan] = useState("Monthly");
+
+  const handlePlanChange = (plan) => {
+    setSelectedPlan(plan);
+  };
   return (
     <div className="container my-5">
       <div className="text-center mb-4">
@@ -10,22 +16,47 @@ const SubscriptionPlans = () => {
         </p>
         <div
           className="btn-group"
-          style={{ backgroundColor: "rgba(128, 128, 128, 0.5)" }}
           role="group"
+          style={{
+            backgroundColor: "#F7F7F7",
+            borderRadius: "8px",
+            overflow: "hidden",
+            padding: "5px",
+          }}
         >
-          <button type="button" className="btn">
+          <Button
+            onClick={() => handlePlanChange("Monthly")}
+            style={{
+              backgroundColor: selectedPlan === "Monthly" ? "white" : "inherit",
+              borderRadius: selectedPlan === "Monthly" ? "8px" : "0",
+              color: selectedPlan === "Monthly" ? "#2970FF" : "#818181",
+              border: "none",
+            }}
+          >
             Monthly
-          </button>
-          <button type="button" className="btn ">
+          </Button>
+          <Button
+            onClick={() => handlePlanChange("Annually")}
+            style={{
+              backgroundColor:
+                selectedPlan === "Annually" ? "white" : "inherit",
+              borderRadius: selectedPlan === "Annually" ? "8px" : "0",
+              color: selectedPlan === "Annually" ? "#2970FF" : "#818181",
+              border: "none",
+            }}
+          >
             Annually
-          </button>
+          </Button>
         </div>
       </div>
 
-      <div className="row">
+      <div className="row" style={{ paddingTop: "50px" }}>
         {/* Forever Free */}
         <div className="col-md-4">
-          <div className="position-relative" style={{ borderRadius: "16px" }}>
+          <div
+            className="position-relative"
+            style={{ borderRadius: "16px", paddingBottom: "15px" }}
+          >
             {/* Most popular */}
 
             {/* card */}
@@ -33,6 +64,7 @@ const SubscriptionPlans = () => {
               className="card border-secondary position-relative"
               style={{
                 borderRadius: "16px 16px 16px 16px",
+                height: "360px",
               }}
             >
               <div className="card-body " style={{}}>
@@ -61,7 +93,7 @@ const SubscriptionPlans = () => {
           <div className="position-relative" style={{ borderRadius: "16px" }}>
             {/* Most popular */}
             <div
-              className="bg-primary w-100"
+              className="bg-primary"
               style={{ borderRadius: "16px 16px 0px 0px", height: "40px" }}
             >
               <div
@@ -76,8 +108,8 @@ const SubscriptionPlans = () => {
               className="card border-primary position-relative"
               style={{
                 borderRadius: "16px 16px 16px 16px",
-                top: "-15px",
                 borderWidth: "3px",
+                bottom: "13px",
               }}
             >
               <div className="card-body " style={{}}>
@@ -111,6 +143,7 @@ const SubscriptionPlans = () => {
               className="card border-secondary position-relative"
               style={{
                 borderRadius: "16px 16px 16px 16px",
+                height: "360px",
               }}
             >
               <div className="card-body " style={{}}>
